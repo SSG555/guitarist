@@ -1,24 +1,80 @@
 *
-    padding: 0
-    margin: 0
-    box-sizing: border-box
+ padding: 0
+ margin: 0
+ box-sizing: border-box
 
-// $backgroung-color1: green
-// $backgroung-color2: blue
+$color-blue: #5290EA
+$color-orange: #F28B64
+$color-grey: #E2E2E2
+$background-color: #F0F0F0
+$box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+.container
+ max-width: 1140px
+ margin: 0 auto
+
+.main-section
+ min-height: 800px
+ background-color: $background-color
+ padding-top: 16px
+ &__logo
+  width: 152px
+ &__nav-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 70px
+ &__content-container
+  display: flex
 
 
-// .block
-//     height: 200px   
-//     width: 400px
-//     background-color: $backgroung-color1
-//     &__text    
-//         background-color: $backgroung-color2        
-// @mixin new-block
-//  height: 100px   
-//  width: 100px
-//  background-color: yellow
+.nav-menu
+ &__list
+  display: flex
+  gap: 64px
+ &__list-item
+  font-size: 18px
+  font-weight: 600
+  list-style-type: none
+  a
+   text-decoration: none
 
-// .block-2
-//     @include new-block
-
-    
+.left-wrapper
+  position: relative
+  &__rectangle-blue
+    position: absolute
+    height: 220px
+    width: 560px
+    background-color: $color-blue
+    transform: rotate(-64deg)
+    top: 140px
+    left: -50px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__rectangle-orange
+    position: absolute
+    height: 220px
+    width: 620px
+    background-color: $color-orange
+    transform: rotate(-51deg)
+    top: 160px
+    left: -34px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__rectangle-grey
+    position: absolute
+    height: 220px
+    width: 610px
+    background-color: $color-grey
+    transform: rotate(-36deg)
+    top: 195px
+    left: 15px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__img
+    position: relative
+    width: 880px
+.icons
+    display: flex
+    gap: 17px
+  
