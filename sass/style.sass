@@ -1,7 +1,7 @@
 *
- padding: 0
- margin: 0
- box-sizing: border-box
+  padding: 0
+  margin: 0
+  box-sizing: border-box
 
 $color-blue: #5290EA
 $color-orange: #F28B64
@@ -9,60 +9,73 @@ $color-grey: #E2E2E2
 $background-color: #F0F0F0
 $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
+@font-face
+  font-family: Montserrat-Regular
+  src: url(../fonts/Montserrat-Regular.ttf)
+  font-weight: normal
+
+@font-face
+  font-family: Montserrat-SemiBold
+  src: url(../fonts/Montserrat-SemiBold.ttf)
+  font-weight: bold
+
+body
+  font-family: Montserrat-Regular
+
 .container
- max-width: 1140px
- margin: 0 auto
+  max-width: 1140px
+  margin: 0 auto
 
 .main-section
- min-height: 800px
- background-color: $background-color
- padding-top: 16px
- overflow: hidden
- position: relative
- &__logo
-  width: 152px
- &__nav-container
-  display: flex
-  justify-content: space-between
-  align-items: center
-  height: 70px
- &__content-container
-  display: flex
+  min-height: 800px
+  background-color: $background-color
+  padding-top: 16px
+  overflow: hidden
   position: relative
- &__first-ring
-  position: absolute
-  top: 120px 
-  right: 0
- &__second-ring
-  position: absolute
-  bottom: -100px
-  right: -70px
+  &__logo
+    width: 152px
+  &__nav-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 70px
+  &__content-container
+    display: flex
+    position: relative
+  &__first-ring
+    position: absolute
+    top: 120px
+    right: 0
+  &__second-ring
+    position: absolute
+    bottom: -100px
+    right: -70px
 
 .nav-menu
- &__list
-  display: flex
-  gap: 64px
- &__list-item
-  font-size: 18px
-  font-weight: 600
-  list-style-type: none
-  a
-   text-decoration: none
-   color: black
-   position: relative
-   &::before
-    content:""
-    height: 100%
-    width: 0
-    border-bottom: 2px solid black
+  &__list
+    display: flex
+    gap: 64px
+  &__list-item
+    font-size: 18px
+    font-weight: 600
+    list-style-type: none
+    a
+      text-decoration: none
+      color: black
+      position: relative
+      font-family: Montserrat-SemiBold
+    &::before
+      content: ""
+      height: 100%
+      width: 0
+      border-bottom: 2px solid black
+      position: absolute
+      top: 0
+      left: 0
+      transition: .5s all
+    &:hover::before
+      width: 100%
 
-    position: absolute
-    top: 0
-    left: 0
-    transition: .5s all
-   &:hover::before
-    width: 100%
-    
 .left-wrapper
   position: relative
   &__rectangle-blue
@@ -98,7 +111,7 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
   &__img
     position: relative
     width: 880px
-  
+
 .icons
   display: flex
   gap: 17px
@@ -113,22 +126,22 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     cursor: pointer
   &__item:hover
     box-shadow: $box-shadow
-    i
-      font-size: 21px
+  i
+    font-size: 21px
 
 .title
   font-size: 72px
-  font-weight: 700
+  font-family: Montserrat-SemiBold
+  // font-weight: 700
 
 .right-wrapper
   position: absolute
-  width: 320px
+  width: 360px
   right: 80px
   top: 125px
   &__text
     font-size: 16px
     margin-bottom: 20px
-  
 
 .buttons
   display: flex
@@ -182,10 +195,9 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     &::before
       height: 190px
       width: 190px
-  
 
 .section-courses
-  min-height: 700px  
+  min-height: 700px
   overflow: hidden
   &__container
     padding-top: 30px
@@ -209,7 +221,6 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     top: 60px
     right: -90px
     z-index: -1
-
 
 .cards-item
   height: 360px
@@ -246,30 +257,59 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     font-size: 18px
     span
       font-size: 48px
-      font-weight: 600
-
-
+      font-family: Montserrat-Semiold
 
 .section-learning
-  min-height: 700px
-  background: $background-color 
+  min-height: 630px
+  background: $background-color
   overflow: hidden
   &__container
     display: flex
     justify-content: space-between
     align-items: center
+    padding-top: 50px
   &__right-wrapper
     max-width: 500px
     position: relative
+    .title
+      line-height: 105%
+      margin-bottom: 20px 
   &__left-wrapper
     position: relative
+    .title
+      position: relative
+      z-index: 2
+      left: 150px
   &__first-wrapper
     position: absolute
   &__first-ring
     position: absolute
-    top: 140px
-    left: 285px
+    top: -120px 
+    left: 100px
   &__second-ring
     position: absolute
     top: -120px
     right: -300px
+  &__img
+    position: absolute
+    top: -20px
+    left: 0
+    z-index: 1 
+  &__text
+    margin-bottom: 30px
+.footer 
+  position: relative
+  &__container
+    min-height: 275px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__img
+    position: absolute
+    left: 0
+    bottom: 0
+  &__wrapper
+    width: 50%
+  &__title
+    line-height: 105%
+    margin-bottom: 20px
