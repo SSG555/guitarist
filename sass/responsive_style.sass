@@ -1,73 +1,120 @@
-@media (max-width: 1300px)
- html
-  font-size: 56.3%
+@media (max-width: 1300px  )
+    html
+        font-size: 56.3%
+    .footer
+        &__img
+            height: 90%
+    .cards-item
+        &__img
+            height: 85%
 
- .footer
-  &__img
-   height: 90%
+@media ( max-width: 1050px)
+    html
+        font-size: 50%
 
- .cards-item
-  &__img
-   height: 85%
+@media ( max-width: 930px)
+    .container
+        padding: 0 3rem
+    .footer
+        &__img
+            height: 75%
+    .section-lerning
+        min-height: 55rem
 
-@media (max-width: 1050px)
- html
-  font-size: 50%
+@media ( max-width: 770px)
+    .nav-menu
+        display: none
+    .icons
+        &__item
+            height: 6rem
+            width: 6rem
+            i
+                font-size: 3rem
+    .left-wrapper
+        &__img
+            width: 50rem
 
-@media (max-width: 930px)
- .container
-  padding: 0 3rem
- .footer
-  &__img
-    height: 75%
- .section-learning
-  min-height: 55rem
+    .right-wrapper
+        top: 6rem
 
-@media (max-width: 770px)
- .nav-menu
-  display: none
- .icons
-  &__item
-   height: 6rem
-   width: 6rem
-   i
-    font-size: 3rem
+    .main-section
+        min-height: 50rem
+        &__second-ring
+            display: none
 
+    .section-courses
+        &__cards-box
+            flex-direction: column
+            align-items: center
 
- .left-wrapper
-  &__img
-   width: 50rem
+    .cards-item
+        width: 70%
+        &__text
+            font-size: 4rem
+            transform: rotate(0deg)
+            width: 47rem
 
- .right-wrapper
-  top: 6rem
+    .icons-item
+        img
+            display: none
 
- .main-section
-  min-height: 50rem
-  &__second-ring
-   display: none
+    .section-lerning
+        min-height: 43rem
+        padding: 2rem 0
 
- .section-courses
-  &__cards-box
-   flex-direction: column
-   align-items: center
+        &__left-wrapper
+            display: none
+        &__right-wrapper
+            max-width: 80%
+            margin: 0 auto
 
- .cards-item
-  width: 70%
-  &_text
-   font-size: 4rem
-   transform: rotate(0deg)
-   width: 47rem
+    .footer
+        &__img
+            height: 60%
+        &__title
+            font-size: 5rem
 
- .icons-item
-  img
-   display: none
-
- .section-learning
-    min-height: 43rem
-    padding: 2rem 0
-  &__left-wrapper
-   display: none
- &__right-wrapper
-  max-width:  80%
-  margin: 0 auto     
 @media (max-width: 590px)
+    .left-wrapper
+        &__img
+            display: none
+    .main-section
+        &__first-ring
+            display: none
+    .right-wrapper
+        left: 12rem
+    .cards-item
+        &__text
+            transform: rotate(90deg)
+            width: 30rem
+    .footer
+        &__img
+            display: none
+        &__container
+            text-align: center
+            justify-content: center 
+        &__wrapper
+            width: 100%
+        &__icon-box
+            justify-content: center
+
+@media (max-width: 380px)
+    .right-wrapper
+        left: 7rem
+    .cards-item
+        height: 26rem
+        &__text
+            width: 30rem
+            font-size: 3rem
+            top: 10rem  
+        &_icons-item
+          &__text
+            font-size: 1.1rem
+            span
+              font-size: 4.3rem
+        .buttons
+          &__text
+            display: none
+
+
+
